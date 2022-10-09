@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph.xml"
+    app:startDestination="@id/progress">
+
+    <fragment
+        android:id="@+id/progress"
+        android:name="com.example.matheus_modanez_rm86065.ProgressFragment"
+        android:label="fragment_progress"
+        tools:layout="@layout/fragment_progress" >
+        <action
+            android:id="@+id/action_progress_to_downloadCompletedFragment"
+            app:destination="@id/downloadCompletedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadCompletedFragment"
+        android:name="com.example.matheus_modanez_rm86065.DownloadCompletedFragment"
+        android:label="DownloadCompletedFragment" >
+        <action
+            android:id="@+id/action_downloadCompletedFragment_to_progress"
+            app:destination="@id/progress" />
+    </fragment>
+</navigation>
